@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --font-inter: "Inter", sans-serif;
+  --sp-dark-2: #050505;
+  --sp-dark-10: #1a1a1a;
+  --sp-light-60: #999999;
+  --sp-light-90: #e6e6e6;
+  --sp-green-60: #4ce6a6;
+  --sp-green-10: #062d1d;
+  --sp-red-70: #ec7979;
+  --sp-red-10: #2d0606;
+  --sp-gray-666: #666666;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--sp-dark-2);
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
