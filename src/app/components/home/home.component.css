@@ -1,3 +1,44 @@
-h1 {
+h1,
+p {
   color: var(--sp-green-60);
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 14rem;
+  overflow-y: hidden;
+  border-right: 1px solid #ddd;
+}
+.home-container {
+  display: flex;
+  position: relative;
+}
+
+.home {
+  flex: 1;
+  margin-left: 14rem;
+  padding: 2rem 2rem 0;
+  overflow-y: auto;
+}
+
+.dummy-div {
+  margin-bottom: 20px;
+}
+
+/* @media only screen and (min-width: 810px) and (max-width: 1199px) {
+  .navbar {
+    width: 15rem;
+  }
+} */
+
+@media only screen and (min-width: 810px) and (max-width: 1199px) {
+  /* .navbar {
+    width: 10rem;
+  }
+
+  .home {
+    margin-left: 10rem;
+  } */
 }
