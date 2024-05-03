@@ -1,25 +1,43 @@
 <div class="sidenav-container">
-  <nav>
+  <aside class="sidebar">
     <div class="img-status">
       <img src="../../../assets/images/Subhrangsu.jpg" alt="" />
 
       <div class="status">
         <div class="dot"></div>
-        <!-- Tablet: Available -->
         <span class="tablet-available">Available</span>
-        <!-- Desktop: Available for Work -->
         <span class="desktop-available">Available for Work</span>
       </div>
     </div>
     <ul>
-      <li><a href="#">Link 1 Line 2 Line 3</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
+      <li
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+      >
+        <span class="fa-solid fa-house icon"></span>
+        <p>Home</p>
+      </li>
+      <li routerLinkActive="selected" routerLink="/about">
+        <span class="fas fa-user-circle icon"></span>
+        <p>About</p>
+      </li>
+      <li routerLinkActive="selected" routerLink="/projects">
+        <i class="fa-regular fa-folder-open icon"></i>
+        <p>Projects</p>
+      </li>
+      <li routerLinkActive="selected" routerLink="/stack">
+        <i class="fa-solid fa-layer-group icon"></i>
+        <p>Stack</p>
+      </li>
+      <li routerLinkActive="selected" routerLink="/blogs">
+        <i class="fa-solid fa-blog icon"></i>
+        <p>Blog</p>
+      </li>
+      <li routerLinkActive="selected" routerLink="/contact">
+        <i class="fa-solid fa-envelope icon"></i>
+        <p>Contact</p>
+      </li>
     </ul>
-  </nav>
+  </aside>
 </div>

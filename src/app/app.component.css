@@ -1,1 +1,19 @@
+.main-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "Sidebar About";
+  height: 100vh;
+}
 
+.navbar {
+  grid-area: Sidebar;
+  border-right: 0.0009rem solid #272727;
+  width: 14rem;
+  overflow-y: hidden;
+}
+
+.main {
+  grid-area: About;
+  overflow-y: auto;
+  padding: 2rem 2rem 0;
+}

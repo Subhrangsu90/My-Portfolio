@@ -1,26 +1,19 @@
-h1,
-p {
-  color: var(--sp-green-60);
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 14rem;
-  overflow-y: hidden;
-  border-right: 1px solid #ddd;
-}
 .home-container {
-  display: flex;
-  position: relative;
+  /* display: grid; */
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "Sidebar Home";
+  height: 100vh;
 }
 
 .home {
-  flex: 1;
-  margin-left: 14rem;
-  padding: 2rem 2rem 0;
+  grid-area: Home;
   overflow-y: auto;
+  padding: 2rem 2rem 0;
+}
+
+h1,
+p {
+  color: var(--sp-green-60);
 }
 
 .dummy-div {
@@ -33,12 +26,12 @@ p {
   }
 } */
 
-@media only screen and (min-width: 810px) and (max-width: 1199px) {
-  /* .navbar {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
     width: 10rem;
   }
 
   .home {
     margin-left: 10rem;
-  } */
+  }
 }

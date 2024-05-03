@@ -1,0 +1,17 @@
+.contact-container {
+  /* display: grid; */
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "Sidebar Contact";
+  height: 100vh;
+}
+
+.contact {
+  grid-area: Contact;
+  overflow-y: auto;
+  padding: 2rem 2rem 0;
+}
+
+h1,
+p {
+  color: var(--sp-green-60);
+}

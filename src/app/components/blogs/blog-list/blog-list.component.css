@@ -1,0 +1,17 @@
+.blog-container {
+  /* display: grid; */
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "Sidebar Blogs";
+  height: 100vh;
+}
+
+.blogs {
+  grid-area: Blogs;
+  overflow-y: auto;
+  padding: 2rem 2rem 0;
+}
+
+h1,
+p {
+  color: var(--sp-green-60);
+}
