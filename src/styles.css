@@ -28,3 +28,21 @@ app-root {
   width: 100%;
   height: inherit;
 }
+
+*::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sp-dark-10);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--sp-light-60);
+  border: 2px solid var(--sp-dark-2);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--sp-green-60);
+}

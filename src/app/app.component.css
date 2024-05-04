@@ -1,7 +1,7 @@
 .main-container {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "Sidebar About";
+  grid-template-areas: "Sidebar Main";
   height: 100vh;
 }
 
@@ -13,7 +13,12 @@
 }
 
 .main {
-  grid-area: About;
+  grid-area: Main;
   overflow-y: auto;
-  padding: 2rem 2rem 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    width: 10rem;
+  }
 }

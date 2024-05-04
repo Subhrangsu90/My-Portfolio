@@ -1,129 +1,32 @@
 <div class="home-container">
   <div class="home">
-    <h1>Home</h1>
-    <div class="dummy-div">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi.
-      </p>
+    <div class="typewriter">
+      <ngx-typed-js
+        [strings]="['Subhrangsu.', 'Web Developer.']"
+        [loop]="true"
+        [typeSpeed]="100"
+      >
+        <h1>
+          Hello Everyone! I'm&nbsp;
+          <span class="typing"></span>
+        </h1>
+      </ngx-typed-js>
     </div>
+    <p>
+      A passionate web designer with a knack for turning ideas into visually
+      stunning,<br />
+      user-friendly websites.
+    </p>
 
-    <div class="dummy-div">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi.
+    <div class="location-about-btn">
+      <p class="text">
+        <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
       </p>
-    </div>
-
-    <div class="dummy-div">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi.
-      </p>
-    </div>
-
-    <div class="dummy-div">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi.
-      </p>
-    </div>
-
-    <div class="dummy-div">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
-    </div>
-    <div class="dummy-div">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt
-        rem, magni voluptas voluptatibus eius voluptatum officiis voluptatem
-        repellendus delectus maxime cupiditate esse similique consequuntur
-        mollitia nisi quis minus? Ipsum.
-      </p>
+      <div class="line"></div>
+      <button class="more-about-me" (click)="navigateToAbout()">
+        <span>More about me</span>
+        <i class="fa-solid fa-arrow-right-long icon"></i>
+      </button>
     </div>
   </div>
 </div>
