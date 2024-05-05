@@ -1,32 +1,108 @@
 <div class="home-container">
   <div class="home">
-    <div class="typewriter">
-      <ngx-typed-js
-        [strings]="['Subhrangsu.', 'Web Developer.']"
-        [loop]="true"
-        [typeSpeed]="100"
-      >
-        <h1>
-          Hello Everyone! I'm&nbsp;
-          <span class="typing"></span>
-        </h1>
-      </ngx-typed-js>
-    </div>
-    <p>
-      A passionate web designer with a knack for turning ideas into visually
-      stunning,<br />
-      user-friendly websites.
-    </p>
-
-    <div class="location-about-btn">
-      <p class="text">
-        <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
+    <div class="about">
+      <div class="typewriter">
+        <ngx-typed-js
+          [strings]="['Subhrangsu.', 'a Web Developer.']"
+          [loop]="true"
+          [typeSpeed]="100"
+        >
+          <h1>
+            Hello Everyone! I'm
+            <span class="typing"></span>
+          </h1>
+        </ngx-typed-js>
+      </div>
+      <p>
+        A passionate web designer with a knack for turning ideas into visually
+        stunning,<br />
+        user-friendly websites.
       </p>
-      <div class="line"></div>
-      <button class="more-about-me" (click)="navigateToAbout()">
-        <span>More about me</span>
-        <i class="fa-solid fa-arrow-right-long icon"></i>
-      </button>
+
+      <div class="location-about-btn">
+        <p class="text">
+          <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
+        </p>
+        <div class="line"></div>
+        <button class="more-about-me" (click)="navigateToAbout()">
+          <span>More about me</span>
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="projects">
+      <h2 class="title">Recent Projects</h2>
+      <div class="projects-card">
+        <project></project>
+        <project></project>
+      </div>
+      <div class="location-about-btn">
+        <div class="line"></div>
+        <button class="more-about-me" (click)="navigateToProject()">
+          <span>View All Projects</span>
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="stack">
+      <h2 class="title">Stack</h2>
+      <div class="stack-card">
+        <div class="card-1">
+          <img src="../../../assets/icons/html-1.svg" alt="HTML 5 Image" />
+
+          <div class="stack-details">
+            <h3 class="stack-title">HTML 5</h3>
+            <p class="stack-description">Structure and Content</p>
+          </div>
+        </div>
+        <div class="card-1">
+          <img src="../../../assets/icons/css-3.svg" alt="CSS Image" />
+
+          <div class="stack-details">
+            <h3 class="stack-title">CSS 3</h3>
+            <p class="stack-description">visual Styling</p>
+          </div>
+        </div>
+        <div class="card-1">
+          <img
+            src="../../../assets/icons/javascript-1.svg"
+            alt="JavaScript Image"
+          />
+
+          <div class="stack-details">
+            <h3 class="stack-title">JavaScript</h3>
+            <p class="stack-description">Web Interactivity</p>
+          </div>
+        </div>
+      </div>
+      <div class="location-about-btn">
+        <div class="line"></div>
+        <button class="more-about-me" (click)="navigateToStack()">
+          <span>View All Stack</span>
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="stack">
+      <h2 class="title">Recent Blogs</h2>
+      <div class="stack-card">
+        <project></project>
+        <project></project>
+      </div>
+      <div class="location-about-btn">
+        <div class="line"></div>
+        <button class="more-about-me" (click)="navigateToBlog()">
+          <span>View All Blogs</span>
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <contact-us></contact-us>
+    </div>
+    <div class="footer">
+      <footer></footer>
     </div>
   </div>
 </div>

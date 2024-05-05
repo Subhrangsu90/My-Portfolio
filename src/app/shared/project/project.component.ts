@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-project',
+  selector: 'project',
   standalone: true,
   imports: [],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.css'
+  styleUrl: './project.component.css',
 })
-export class ProjectComponent {
-
-}
+export class ProjectComponent {}

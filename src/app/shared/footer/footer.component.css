@@ -1,0 +1,9 @@
+.footer-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-container p {
+  color: var(--sp-gray-666);
+  font-size: 12pt;
+}
