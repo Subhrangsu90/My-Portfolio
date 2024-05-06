@@ -6,7 +6,8 @@
 }
 
 .connect-text {
-  font-size: 8.5rem;
+  font-size: 11vw;
+  max-width: 100%;
   color: var(--sp-light-90);
   position: relative;
 }

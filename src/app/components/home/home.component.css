@@ -190,3 +190,10 @@ p {
     width: 100%;
   }
 }
+
+/* Phone style (up to 809px) */
+@media only screen and (max-width: 767px) {
+  .projects .projects-card {
+    flex-wrap: wrap;
+  }
+}
