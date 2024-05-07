@@ -1,11 +1,14 @@
 <div class="project-card">
   <div class="project-img">
-    <img src="../../../assets/images/CSSUnits.png" alt="" />
+    <img [src]="project.imageUrl" alt="{{ project.title }}" />
+    <!-- Bind project image URL -->
   </div>
   <div class="project-summary">
     <div class="project-title-category">
-      <p class="category">Web Development</p>
-      <h3 class="title">Awesome Project</h3>
+      <p class="category">{{ project.category }}</p>
+      <!-- Bind project category -->
+      <h3 class="title">{{ project.title }}</h3>
+      <!-- Bind project title -->
     </div>
     <div class="details-arrow">
       <i class="fa-solid fa-arrow-right-long icon"></i>

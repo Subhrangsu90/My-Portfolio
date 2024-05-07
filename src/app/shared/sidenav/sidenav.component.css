@@ -1,9 +1,9 @@
 .sidenav-container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* justify-content: space-evenly; */
-  padding: 2rem;
-  gap: 4rem;
+  padding: 2rem 2rem 0 2rem;
+  /* gap: 4rem; */
   height: 100%;
 }
 
@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  height: inherit;
 }
 
 .img-status {
@@ -51,8 +52,20 @@ img {
   font-size: 14px;
   font-weight: 500;
 }
+.img-status .my-status {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-.sidenav-container ul {
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  gap: 2rem;
+}
+
+.navbar ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
@@ -60,10 +73,10 @@ img {
   gap: 0.5rem;
 }
 
-.sidenav-container ul li {
+.navbar ul li {
   display: flex;
   align-items: center;
-  padding: 0.6rem;
+  padding: 0.8rem;
   color: var(--sp-light-60);
   cursor: pointer;
   gap: 1rem;
@@ -76,33 +89,33 @@ img {
   transition: background-position 0.3s ease-out, color 0.3s ease;
 }
 
-.sidenav-container ul li:hover {
+.navbar ul li:hover {
   color: var(--sp-green-60);
 }
 
-.sidenav-container ul li .icon {
+.navbar ul li .icon {
   width: 16px;
   transition: transform 0.3s ease;
   font-size: 10pt;
 }
 
-.sidenav-container ul li:hover .icon {
+.navbar ul li:hover .icon {
   transform: scale(1.5);
 }
 
-.sidenav-container ul li p {
+.navbar ul li p {
   font-size: 10pt;
   margin: 0 0 0 12px;
 }
 
-.sidenav-container ul li.selected {
+.navbar ul li.selected {
   border-radius: 12px;
   color: var(--sp-light-90);
   background-color: var(--sp-dark-10);
   background-position: 100% 0;
 }
 
-.sidenav-container ul li.selected .icon {
+.navbar ul li.selected .icon {
   transform: none;
 }
 
@@ -126,8 +139,93 @@ img {
   color: var(--sp-green-60);
 }
 
+/* ======================= Phone CSS ======================== */
+
+/* ======================== Hamburger ====================== */
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: var(--sp-light-90);
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.hamburger3 .bar1 {
+  transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+  transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1 {
+  transform: rotate(45deg);
+  height: 3px;
+  width: 42px;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar3 {
+  transform: rotate(45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2 {
+  transform: rotate(-45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar4 {
+  transform: rotate(-45deg);
+  height: 3px;
+  width: 42px;
+}
+
 @media only screen and (min-width: 1025px) {
   .tablet-available {
+    display: none;
+  }
+
+  .hamburger-icon {
     display: none;
   }
 }
@@ -153,18 +251,22 @@ img {
     width: 8rem;
   }
 
-  .sidenav-container ul li p {
+  .navbar {
+    gap: 1rem;
+  }
+
+  .navbar ul li p {
     display: none;
   }
 
-  .sidenav-container ul {
+  .navbar ul {
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
     margin-bottom: 0;
   }
 
-  .sidenav-container ul li .icon {
+  .navbar ul li .icon {
     width: auto;
     font-size: 0.7rem;
   }
@@ -180,10 +282,62 @@ img {
     font-size: 0.7rem;
     padding: 0.2rem;
   }
+
+  .hamburger-icon {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .tablet-available {
     display: none;
+  }
+  .img-status {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sidenav-container {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .img-status .my-status {
+    flex-direction: row;
+    /* gap: 0.5rem; */
+    align-items: center;
+  }
+
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .status {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    position: absolute;
+    width: -webkit-fill-available;
+    height: auto;
+    background-color: var(--sp-dark-2);
+    top: 16%;
+    gap: 0;
+    z-index: 1000;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    margin-right: 1.4rem;
+  }
+  .social-container {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .hide {
+    /* opacity: 0;
+    overflow: hidden;
+    transform: translatey(-100%); */
+    height: 0;
+    opacity: 0;
   }
 }

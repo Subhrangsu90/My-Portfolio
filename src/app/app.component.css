@@ -22,3 +22,24 @@
     width: 10rem;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "Navbar" "Main";
+    height: auto;
+  }
+
+  .navbar {
+    grid-area: Navbar;
+    /* border-bottom: 0.0009rem solid #272727;  */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .main {
+    grid-area: Main;
+    overflow-y: auto;
+  }
+}

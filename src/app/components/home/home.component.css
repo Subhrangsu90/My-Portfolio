@@ -63,7 +63,9 @@ p {
   );
   background-size: 6px 2px;
 }
-
+.addr {
+  display: contents;
+}
 .more-about-me {
   display: inline-flex;
   align-items: center;
@@ -107,7 +109,9 @@ p {
 .projects .projects-card {
   display: flex;
   gap: 1.5rem;
+  cursor: pointer;
 }
+
 .stack {
   padding: 2rem 0;
 }
@@ -142,6 +146,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .card-1 img {
@@ -193,7 +198,38 @@ p {
 
 /* Phone style (up to 809px) */
 @media only screen and (max-width: 767px) {
+  .home {
+    padding: 1rem 1rem 0;
+  }
+
   .projects .projects-card {
     flex-wrap: wrap;
+  }
+
+  .stack-card {
+    flex-wrap: wrap;
+  }
+
+  .card-1 {
+    width: 100%;
+  }
+
+  .location-about-btn {
+    flex-direction: column;
+    align-items: normal;
+    gap: 2rem;
+  }
+
+  .s-line {
+    display: none;
+  }
+  .more-about-me {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .addr {
+    display: flex;
+    align-items: center;
   }
 }

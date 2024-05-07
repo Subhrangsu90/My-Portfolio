@@ -20,10 +20,12 @@
       </p>
 
       <div class="location-about-btn">
-        <p class="text">
-          <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
-        </p>
-        <div class="line"></div>
+        <div class="addr">
+          <p class="text">
+            <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
+          </p>
+          <div class="line"></div>
+        </div>
         <button class="more-about-me" (click)="navigateToAbout()">
           <span>More about me</span>
           <i class="fa-solid fa-arrow-right-long icon"></i>
@@ -33,11 +35,12 @@
     <div class="projects">
       <h2 class="title">Recent Projects</h2>
       <div class="projects-card">
-        <project></project>
-        <project></project>
+        <div *ngFor="let project of dummyProject">
+          <project [project]="project"></project>
+        </div>
       </div>
       <div class="location-about-btn">
-        <div class="line"></div>
+        <div class="line s-line"></div>
         <button class="more-about-me" (click)="navigateToProject()">
           <span>View All Projects</span>
           <i class="fa-solid fa-arrow-right-long icon"></i>
@@ -76,7 +79,7 @@
         </div>
       </div>
       <div class="location-about-btn">
-        <div class="line"></div>
+        <div class="line s-line"></div>
         <button class="more-about-me" (click)="navigateToStack()">
           <span>View All Stack</span>
           <i class="fa-solid fa-arrow-right-long icon"></i>
@@ -86,11 +89,13 @@
     <div class="projects">
       <h2 class="title">Recent Blogs</h2>
       <div class="projects-card">
-        <project></project>
-        <project></project>
+        <div *ngFor="let project of dummyProject">
+          <project [project]="project"></project>
+        </div>
       </div>
+
       <div class="location-about-btn">
-        <div class="line"></div>
+        <div class="line s-line"></div>
         <button class="more-about-me" (click)="navigateToBlog()">
           <span>View All Blogs</span>
           <i class="fa-solid fa-arrow-right-long icon"></i>

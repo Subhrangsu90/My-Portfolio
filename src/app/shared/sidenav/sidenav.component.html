@@ -1,51 +1,71 @@
 <div class="sidenav-container">
   <aside class="sidebar">
     <div class="img-status">
-      <img src="../../../assets/images/Subhrangsu.jpg" alt="" />
+      <div class="my-status">
+        <img src="../../../assets/images/Subhrangsu.jpg" alt="" />
 
-      <div class="status">
-        <div class="dot"></div>
-        <span class="tablet-available">Available</span>
-        <span class="desktop-available">Available for Work</span>
+        <div class="status">
+          <div class="dot"></div>
+          <span class="tablet-available">Available</span>
+          <span class="desktop-available">Available for Work</span>
+        </div>
+      </div>
+      <div class="hamburger-icon">
+        <input
+          type="checkbox"
+          id="checkbox3"
+          class="checkbox3 visuallyHidden"
+          [(ngModel)]="isSidebarOpen"
+        />
+        <label for="checkbox3">
+          <div class="hamburger hamburger3">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+        </label>
       </div>
     </div>
-    <ul>
-      <li
-        routerLinkActive="selected"
-        [routerLinkActiveOptions]="{ exact: true }"
-        routerLink="/"
-      >
-        <span class="fa-solid fa-house icon"></span>
-        <p>Home</p>
-      </li>
-      <li routerLinkActive="selected" routerLink="/about">
-        <span class="fas fa-user-circle icon"></span>
-        <p>About</p>
-      </li>
-      <li routerLinkActive="selected" routerLink="/projects">
-        <i class="fa-regular fa-folder-open icon"></i>
-        <p>Projects</p>
-      </li>
-      <li routerLinkActive="selected" routerLink="/stack">
-        <i class="fa-solid fa-layer-group icon"></i>
-        <p>Stack</p>
-      </li>
-      <li routerLinkActive="selected" routerLink="/blogs">
-        <i class="fa-solid fa-blog icon"></i>
-        <p>Blog</p>
-      </li>
-      <li routerLinkActive="selected" routerLink="/contact">
-        <i class="fa-solid fa-envelope icon"></i>
-        <p>Contact</p>
-      </li>
-    </ul>
+    <div class="navbar" [class.hide]="!isSidebarOpen">
+      <ul>
+        <li
+          routerLinkActive="selected"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/"
+        >
+          <span class="fa-solid fa-house icon"></span>
+          <p>Home</p>
+        </li>
+        <li routerLinkActive="selected" routerLink="/about">
+          <span class="fas fa-user-circle icon"></span>
+          <p>About</p>
+        </li>
+        <li routerLinkActive="selected" routerLink="/projects">
+          <i class="fa-regular fa-folder-open icon"></i>
+          <p>Projects</p>
+        </li>
+        <li routerLinkActive="selected" routerLink="/stack">
+          <i class="fa-solid fa-layer-group icon"></i>
+          <p>Stack</p>
+        </li>
+        <li routerLinkActive="selected" routerLink="/blogs">
+          <i class="fa-solid fa-blog icon"></i>
+          <p>Blog</p>
+        </li>
+        <li routerLinkActive="selected" routerLink="/contact">
+          <i class="fa-solid fa-envelope icon"></i>
+          <p>Contact</p>
+        </li>
+      </ul>
+      <div class="social-container">
+        <i class="fa-brands fa-github icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-brands fa-linkedin icon"></i>
+        <i class="fa-brands fa-instagram icon"></i>
+        <!-- <i class="fa-brands fa-facebook icon"></i>
+        <i class="fa-brands fa-youtube icon"></i> -->
+      </div>
+    </div>
   </aside>
-  <div class="social-container">
-    <i class="fa-brands fa-github icon"></i>
-    <i class="fa-brands fa-twitter icon"></i>
-    <i class="fa-brands fa-linkedin icon"></i>
-    <i class="fa-brands fa-instagram icon"></i>
-    <!-- <i class="fa-brands fa-facebook icon"></i>
-    <i class="fa-brands fa-youtube icon"></i> -->
-  </div>
 </div>
