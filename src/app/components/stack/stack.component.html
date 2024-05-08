@@ -1,3 +1,35 @@
 <div class="stack-container">
-  <div class="stacks"><h1>Stack</h1></div>
+  <div class="stacks">
+    <div class="heading">
+      <h1>My Tech Toolbox</h1>
+    </div>
+    <div class="stack">
+      <div class="card-1" *ngFor="let category of stack">
+        <h2 class="title">{{ category.name }}</h2>
+        <div class="cards-container">
+          <div class="card" *ngFor="let tech of category.technologies">
+            <img
+              [src]="
+                '../../../assets/icons/' + tech.name.toLowerCase() + '.svg'
+              "
+              [alt]="tech.name + ' Image'"
+            />
+            <div class="stack-details">
+              <div>
+                <h3 class="stack-title">{{ tech.name }}</h3>
+                <p class="use-for">{{ tech.useFor }}</p>
+              </div>
+              <p class="stack-description">{{ tech.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <contact-us></contact-us>
+    </div>
+    <div class="footer">
+      <footer></footer>
+    </div>
+  </div>
 </div>

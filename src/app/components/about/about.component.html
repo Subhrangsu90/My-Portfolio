@@ -1,5 +1,68 @@
 <div class="about-container">
   <div class="about">
-    <h1>About</h1>
+    <div class="heading">
+      <h1>Get To Know Me</h1>
+      <p>
+        Hello, I'm Subhrangsu, and I'm more than just a web developer; I'm a
+        digital storyteller. I have always been captivated by the art of web
+        design, and my journey in this field has been nothing short of
+        exhilarating. My goal is to craft websites that not only look beautiful
+        but also function seamlessly, providing an exceptional user experience.
+      </p>
+      <div class="location-about-btn">
+        <div class="addr">
+          <p class="text">
+            <i class="fa-solid fa-location-dot icon"></i> West Bengal, India
+          </p>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="education">
+      <h2 class="title">Education</h2>
+      <div *ngFor="let qualification of qualifications" class="deg">
+        <div>
+          <h3 class="deg-name">
+            {{ qualification.degree }} in {{ qualification.field }}
+          </h3>
+          <p class="deg-from">{{ qualification.institution }}</p>
+        </div>
+        <div>
+          <p
+            *ngIf="qualification.cgpa || qualification.percentage"
+            class="deg-details"
+          >
+            <span *ngIf="qualification.cgpa"
+              >CGPA: {{ qualification.cgpa }}</span
+            >
+            <span *ngIf="qualification.cgpa && qualification.percentage">
+              |
+            </span>
+            <span *ngIf="qualification.percentage"
+              >Percentage: {{ qualification.percentage }}</span
+            >
+          </p>
+          <p class="deg-details">
+            Passing Year: {{ qualification.passingYear }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="stack">
+      <h2 class="title">Stack</h2>
+    </div>
+
+    <div class="experience">
+      <h2 class="title">Experience</h2>
+    </div>
+    <div class="certification">
+      <h2 class="title">Certification</h2>
+    </div>
+    <div class="contact-us">
+      <contact-us></contact-us>
+    </div>
+    <div class="footer">
+      <footer></footer>
+    </div>
   </div>
 </div>
