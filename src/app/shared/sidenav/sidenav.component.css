@@ -321,14 +321,6 @@ img {
     position: absolute;
     width: -webkit-fill-available;
     height: auto;
-    transform-style: preserve-3d;
-    background: linear-gradient(
-      rgb(106 105 105 / 15%),
-      rgba(255, 255, 255, 0.05)
-    );
-
-    backdrop-filter: blur(10px);
-
     top: 14%;
     gap: 0;
     z-index: 1000;
@@ -337,6 +329,13 @@ img {
     margin-right: 1.4rem;
     padding-top: 0.5rem;
     border-radius: 12px;
+    transform-style: preserve-3d;
+    background: linear-gradient(
+      rgb(106 105 105 / 15%),
+      rgba(255, 255, 255, 0.05)
+    );
+
+    backdrop-filter: blur(10px);
   }
   .social-container {
     justify-content: space-between;
