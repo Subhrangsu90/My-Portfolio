@@ -320,11 +320,14 @@ img {
   .navbar {
     position: absolute;
     width: -webkit-fill-available;
-    transform-style: preserve-3d;
     height: auto;
-    background-color: var(--sp-dark-2);
+    transform-style: preserve-3d;
+    background: linear-gradient(
+      rgb(106 105 105 / 15%),
+      rgba(255, 255, 255, 0.05)
+    );
 
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
 
     top: 14%;
     gap: 0;
