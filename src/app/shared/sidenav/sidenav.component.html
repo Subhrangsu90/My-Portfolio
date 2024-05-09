@@ -33,36 +33,67 @@
           routerLinkActive="selected"
           [routerLinkActiveOptions]="{ exact: true }"
           routerLink="/"
+          (click)="navigateTo('/')"
         >
           <span class="fa-solid fa-house icon"></span>
           <p>Home</p>
         </li>
-        <li routerLinkActive="selected" routerLink="/about">
+        <li
+          routerLinkActive="selected"
+          routerLink="/about"
+          (click)="navigateTo('/about')"
+        >
           <span class="fas fa-user-circle icon"></span>
           <p>About</p>
         </li>
-        <li routerLinkActive="selected" routerLink="/projects">
+
+        <li
+          routerLinkActive="selected"
+          routerLink="/projects"
+          (click)="navigateTo('/projects')"
+        >
           <i class="fa-regular fa-folder-open icon"></i>
           <p>Projects</p>
         </li>
-        <li routerLinkActive="selected" routerLink="/stack">
+        <li
+          routerLinkActive="selected"
+          routerLink="/stack"
+          (click)="navigateTo('/stack')"
+        >
           <i class="fa-solid fa-layer-group icon"></i>
           <p>Stack</p>
         </li>
-        <li routerLinkActive="selected" routerLink="/blogs">
+        <li
+          routerLinkActive="selected"
+          routerLink="/blogs"
+          (click)="navigateTo('/blogs')"
+        >
           <i class="fa-solid fa-blog icon"></i>
           <p>Blog</p>
         </li>
-        <li routerLinkActive="selected" routerLink="/contact">
+        <li
+          routerLinkActive="selected"
+          routerLink="/contact"
+          (click)="navigateTo('/contact')"
+        >
           <i class="fa-solid fa-envelope icon"></i>
           <p>Contact</p>
         </li>
       </ul>
       <div class="social-container">
-        <i class="fa-brands fa-github icon"></i>
-        <i class="fa-brands fa-twitter icon"></i>
-        <i class="fa-brands fa-linkedin icon"></i>
-        <i class="fa-brands fa-instagram icon"></i>
+        <a href="https://github.com/Subhrangsu90" target="_blank"
+          ><i class="fa-brands fa-github icon"></i
+        ></a>
+        <a href="https://twitter.com/SubhrangsuBera" target="_blank"
+          ><i class="fa-brands fa-twitter icon"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/subhrangsu-bera/" target="_blank"
+          ><i class="fa-brands fa-linkedin icon"></i
+        ></a>
+        <a href="https://www.instagram.com/subhrangsubera/" target="_blank"
+          ><i class="fa-brands fa-instagram icon"></i
+        ></a>
+
         <!-- <i class="fa-brands fa-facebook icon"></i>
         <i class="fa-brands fa-youtube icon"></i> -->
       </div>

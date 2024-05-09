@@ -53,8 +53,15 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  background-color: var(--sp-dark-10);
+  /* background-color: var(--sp-dark-10); */
   width: 100%;
+  transform-style: preserve-3d;
+  background: linear-gradient(
+    rgb(106 105 105 / 15%),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(10px);
 }
 
 .stack-details {

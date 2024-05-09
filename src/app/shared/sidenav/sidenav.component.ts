@@ -15,15 +15,16 @@ export class SidenavComponent {
 
   isSidebarOpen: boolean = false;
 
-  // toggleSidebar() {
-  //   if (this.isSidebarOpen) {
-  //     console.log('close', this.isSidebarOpen);
-  //     this.isSidebarOpen = false;
-  //   } else {
-  //     console.log('open', this.isSidebarOpen);
-  //     this.isSidebarOpen = true;
-  //   }
-  // }
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+  closeSidebar() {
+    this.isSidebarOpen = false; // Close the navbar
+  }
+  navigateTo(route: string) {
+    this.router.navigateByUrl(route); // Navigate to the specified route
+    this.closeSidebar(); // Close the navbar after navigation
+  }
 
   isActive(route: string): boolean {
     return this.router.isActive(route, true);
