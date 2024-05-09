@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SidenavComponent } from '../../shared/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from '../../shared/contact-us/contact-us.component';
 import { FooterComponent } from '../../shared/footer/footer.component';

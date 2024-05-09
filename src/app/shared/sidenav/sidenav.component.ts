@@ -19,11 +19,11 @@ export class SidenavComponent {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
   closeSidebar() {
-    this.isSidebarOpen = false; // Close the navbar
+    this.isSidebarOpen = false;
   }
   navigateTo(route: string) {
-    this.router.navigateByUrl(route); // Navigate to the specified route
-    this.closeSidebar(); // Close the navbar after navigation
+    this.router.navigateByUrl(route);
+    this.closeSidebar();
   }
 
   isActive(route: string): boolean {
