@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from '../../shared/contact-us/contact-us.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -11,6 +12,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   styleUrl: './about.component.css',
 })
 export class AboutComponent {
+  constructor(private router: Router) {}
   qualifications = [
     {
       institution: 'Vidyasagar University, West Bengal',
@@ -40,4 +42,7 @@ export class AboutComponent {
       passingYear: 2014,
     },
   ];
+  navigateToStack() {
+    this.router.navigate(['/stack']);
+  }
 }

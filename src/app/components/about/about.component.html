@@ -20,36 +20,61 @@
     </div>
     <div class="education">
       <h2 class="title">Education</h2>
-      <div *ngFor="let qualification of qualifications" class="deg">
-        <div>
-          <h3 class="deg-name">
-            {{ qualification.degree }} in {{ qualification.field }}
-          </h3>
-          <p class="deg-from">{{ qualification.institution }}</p>
-        </div>
-        <div>
-          <p
-            *ngIf="qualification.cgpa || qualification.percentage"
-            class="deg-details"
-          >
-            <span *ngIf="qualification.cgpa"
-              >CGPA: {{ qualification.cgpa }}</span
+      <div
+        *ngFor="let qualification of qualifications; let last = last"
+        class="deg"
+      >
+        <div class="deg-cont">
+          <div>
+            <h3 class="deg-name">
+              <i class="fa-solid fa-graduation-cap"></i>
+              {{ qualification.degree }} in {{ qualification.field }}
+            </h3>
+            <p class="deg-from">{{ qualification.institution }}</p>
+          </div>
+          <div class="marks-year">
+            <p
+              *ngIf="qualification.cgpa || qualification.percentage"
+              class="deg-details"
             >
-            <span *ngIf="qualification.cgpa && qualification.percentage">
-              |
-            </span>
-            <span *ngIf="qualification.percentage"
-              >Percentage: {{ qualification.percentage }}</span
-            >
-          </p>
-          <p class="deg-details">
-            Passing Year: {{ qualification.passingYear }}
-          </p>
+              <span *ngIf="qualification.cgpa"
+                >CGPA: {{ qualification.cgpa }}</span
+              >
+              <span *ngIf="qualification.cgpa && qualification.percentage">
+                |
+              </span>
+              <span *ngIf="qualification.percentage"
+                >Percentage: {{ qualification.percentage }}</span
+              >
+            </p>
+            <p class="deg-details">
+              Passing Year: {{ qualification.passingYear }}
+            </p>
+          </div>
         </div>
+        <hr *ngIf="!last" class="vertical-line" />
+      </div>
+      <div class="location-about-btn">
+        <div class="line"></div>
       </div>
     </div>
     <div class="stack">
       <h2 class="title">Stack</h2>
+      <div class="stack">
+        <p>
+          My technical toolkit includes proficiency in Framer, Figma, HTML, CSS,
+          JavaScript, and various design software like Adobe Creative Suite. I'm
+          also well-versed in responsive web design, ensuring that websites I
+          create look and function flawlessly across all devices.
+        </p>
+      </div>
+      <div class="location-about-btn">
+        <div class="line s-line"></div>
+        <button class="more-about-me" (click)="navigateToStack()">
+          <span>View All Stack</span>
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
     </div>
 
     <div class="experience">

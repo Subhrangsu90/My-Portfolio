@@ -58,7 +58,7 @@ p {
   color: var(--sp-green-60);
   margin-right: 0.2rem;
 }
-
+/* ================ Education ===================== */
 .education {
   padding: 2rem 0;
 }
@@ -71,7 +71,12 @@ p {
 }
 
 .deg {
-  margin: 1.5rem 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.deg-cont {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -83,10 +88,15 @@ p {
   font-weight: bold;
 }
 
+.deg-name i {
+  padding-right: 1rem;
+}
+
 .deg-from {
   color: var(--sp-light-60);
   font-size: 16px;
   margin-top: 0.5rem;
+  padding-left: 2.35rem;
 }
 
 .deg-details {
@@ -95,8 +105,74 @@ p {
   /* margin-top: 5px; */
 }
 
-/* ============== Stack ====================== */
+.vertical-line {
+  border: none;
+  border-left: 0.1rem dotted var(--sp-gray-666);
+  margin: 0.3rem 0.5rem;
+  height: 1.3rem;
+}
 
+.location-about-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--sp-light-60) 50%,
+    transparent 50%
+  );
+  background-size: 6px 2px;
+}
+
+/* ============== Stack ====================== */
+.stack {
+  /* padding: 1rem 0; */
+}
+.stack p {
+  color: var(--sp-light-60);
+  font-size: 12pt;
+  line-height: 1.1rem;
+}
+
+.location-about-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.more-about-me {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--sp-light-60);
+  border-radius: 0.6rem;
+  background-color: transparent;
+  color: var(--sp-light-60);
+  font-size: 11pt;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.more-about-me:hover {
+  color: var(--sp-green-60);
+  background-color: var(--sp-dark-10);
+  border: 1px solid var(--sp-dark-10);
+}
+
+.more-about-me .icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.more-about-me:hover .icon {
+  transform: translateX(3px);
+}
+/* ============== Common ===================== */
 @keyframes slideInFromBottom {
   from {
     transform: translateY(50%);
@@ -118,4 +194,29 @@ p {
 
 .footer {
   padding: 2.5rem 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .marks-year {
+    padding-left: 2.3rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .marks-year {
+    padding-left: 2.3rem;
+  }
+
+  .location-about-btn {
+    flex-direction: column;
+    align-items: normal;
+    gap: 2rem;
+  }
+
+  .s-line {
+    display: none;
+  }
+  .more-about-me {
+    margin-left: 0;
+    justify-content: center;
+  }
 }
