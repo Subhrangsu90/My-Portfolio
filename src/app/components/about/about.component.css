@@ -132,7 +132,11 @@ p {
 /* ============== Stack ====================== */
 .stack {
   /* padding: 1rem 0; */
+  .experience {
+    padding: 2rem 0;
+  }
 }
+
 .stack p {
   color: var(--sp-light-60);
   font-size: 12pt;
@@ -171,6 +175,124 @@ p {
 
 .more-about-me:hover .icon {
   transform: translateX(3px);
+}
+
+/* ==================== Experience ============== */
+.exp-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.exp-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.exp-name {
+  color: var(--sp-light-90);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.exp-name i {
+  padding-right: 1rem;
+}
+
+.exp-company {
+  color: var(--sp-light-60);
+  font-size: 16px;
+  margin-left: 1rem;
+}
+
+.exp-duration {
+  color: var(--sp-light-60);
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.exp-desc {
+  color: var(--sp-light-60);
+  font-size: 12pt;
+  line-height: 1.1rem;
+  margin-left: 2.35rem;
+}
+
+.exp-desc ul {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.exp-desc li {
+  margin-bottom: 0.5rem;
+}
+
+/* =============== Certification ============== */
+.certification {
+  padding: 2rem 0;
+}
+
+.cert-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.cert-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cert-name {
+  color: var(--sp-light-90);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cert-name i {
+  padding-right: 1rem;
+}
+
+.cert-org {
+  color: var(--sp-light-60);
+  font-size: 16px;
+  margin-left: 1rem;
+}
+
+.cert-year {
+  color: var(--sp-light-60);
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.cert-desc {
+  color: var(--sp-light-60);
+  font-size: 12pt;
+  line-height: 1.1rem;
+  margin-left: 2.35rem;
+}
+
+.cert-desc ul {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.cert-desc li {
+  margin-bottom: 0.5rem;
 }
 /* ============== Common ===================== */
 @keyframes slideInFromBottom {

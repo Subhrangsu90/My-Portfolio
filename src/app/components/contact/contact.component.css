@@ -1,7 +1,4 @@
 .contact-container {
-  /* display: grid; */
-  grid-template-columns: auto 1fr;
-  grid-template-areas: "Sidebar Contact";
   height: 100vh;
 }
 
