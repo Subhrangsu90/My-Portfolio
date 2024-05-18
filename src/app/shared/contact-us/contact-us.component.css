@@ -59,3 +59,18 @@
     left: 100%;
   }
 }
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.lets-connect {
+  animation: slideInFromBottom 2s ease-out;
+}

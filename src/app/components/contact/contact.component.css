@@ -24,7 +24,7 @@ h1 {
 .contact-content {
   padding: 2rem 0;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .message-form {
@@ -79,7 +79,14 @@ h1 {
   padding: 0.8rem;
   border-radius: 12px;
   font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
+
+.send-btn:hover {
+  opacity: 0.8;
+}
+
 .send-btn p {
   font-size: 12pt;
   text-wrap: nowrap;
@@ -128,10 +135,9 @@ h1 {
 .social-links a:hover .icon {
   transform: scale(1.5);
 }
-.email-phone-info div .icon:hover,
-.social-links a .icon:hover {
-  transform: scale(1.2);
-  color: var(--sp-green-60);
+
+.footer {
+  padding: 1rem 0;
 }
 
 @keyframes slideInFromBottom {
