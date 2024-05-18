@@ -94,7 +94,12 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+textarea,
+input,
+button,
+select,
+optgroup {
   margin: 0;
   padding: 0;
   border: 0;
@@ -144,6 +149,32 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* Reset for form elements */
+textarea,
+input,
+button,
+select,
+optgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 body {
