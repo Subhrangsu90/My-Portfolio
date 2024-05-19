@@ -22,7 +22,6 @@ export class ProjectComponent implements OnInit {
   @ViewChild('shine')
   shine!: ElementRef;
   @ViewChild('projectcard') content!: ElementRef;
-  @ViewChild('featureCard') featureCard!: ElementRef;
 
   ngOnInit(): void {
     VanillaTilt.init(document.querySelector('.project-card') as any);
