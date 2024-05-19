@@ -1,14 +1,21 @@
-<div class="project-card">
+<div
+  #projectcard
+  class="project-card"
+  data-tilt
+  data-tilt-reverse="true"
+  data-tilt-max="1"
+  data-tilt-speed="500"
+  data-tilt-perspective="500"
+  (mousemove)="handleMouseMove($event)"
+>
   <div class="project-img">
     <img [src]="project.imageUrl" alt="{{ project.title }}" />
-    <!-- Bind project image URL -->
   </div>
   <div class="project-summary">
     <div class="project-title-category">
       <p class="category">{{ project.category }}</p>
-      <!-- Bind project category -->
+
       <h3 class="title">{{ project.title }}</h3>
-      <!-- Bind project title -->
     </div>
     <div class="details-arrow">
       <i class="fa-solid fa-arrow-right-long icon"></i>
@@ -16,4 +23,5 @@
       <i class="fa-solid fa-arrow-right-long icon"></i>
     </div>
   </div>
+  <div class="shine" #shine></div>
 </div>

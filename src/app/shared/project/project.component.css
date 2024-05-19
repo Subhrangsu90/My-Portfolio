@@ -1,12 +1,37 @@
 .project-card {
+  position: relative;
   width: 100%;
-  /* max-width: 28rem; */
   height: auto;
   border-radius: 12px;
+  background-color: var(--sp-midnight-blue-10);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   overflow: hidden;
   padding-bottom: 24px;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--sp-gray-666);
+  padding: 1rem;
+}
+
+.shine {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 30rem;
+  overflow: hidden;
+  background-color: var(--sp-green-60);
+  filter: blur(250px);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.project-card:hover .shine {
+  opacity: 1;
 }
 
 .project-img {
