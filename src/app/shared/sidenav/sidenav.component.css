@@ -327,10 +327,9 @@ img:hover {
     width: -webkit-fill-available;
     height: auto;
     transform-style: preserve-3d;
-    background-color: var(--sp-dark-2);
-
-    /* backdrop-filter: blur(10px); */
-
+    /* background-color: var(--sp-dark-2); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     top: 14%;
     gap: 0;
     z-index: 1000;
