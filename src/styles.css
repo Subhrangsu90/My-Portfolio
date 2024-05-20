@@ -7,10 +7,11 @@
   --sp-light-90: #e6e6e6;
   --sp-green-60: #4ce6a6;
   --sp-green-10: #062d1d;
+  --sp-sky-blue-50: #33b3ae;
   --sp-red-70: #ec7979;
   --sp-red-10: #2d0606;
   --sp-gray-666: #666666;
-  --sp-midnight-blue-10: #11171f;
+  --sp-midnight-blue-10: #0f1013ab;
 }
 
 /* ============== Reset CSS ============ */

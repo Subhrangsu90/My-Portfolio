@@ -131,12 +131,13 @@ p {
 
 /* ============== Stack Card Style ================ */
 .stack-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
 .card-1 {
-  width: 19rem;
+  width: auto;
   background-color: var(--sp-dark-10);
   border-radius: 12px;
   padding: 0.8rem;
@@ -185,6 +186,7 @@ p {
   }
 
   .stack-card {
+    display: flex;
     flex-wrap: wrap;
   }
 
@@ -204,6 +206,7 @@ p {
   }
 
   .stack-card {
+    display: flex;
     flex-wrap: wrap;
   }
 

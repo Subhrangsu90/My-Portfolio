@@ -18,12 +18,12 @@
   position: absolute;
   bottom: -50px;
   right: -50px;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 30rem;
   overflow: hidden;
-  background-color: var(--sp-green-60);
-  filter: blur(250px);
+  background-color: var(--sp-sky-blue-50);
+  filter: blur(280px);
   z-index: 0;
   opacity: 0;
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
