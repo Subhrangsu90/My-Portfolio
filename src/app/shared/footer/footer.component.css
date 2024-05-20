@@ -22,3 +22,11 @@
 .footer-container {
   animation: slideInFromBottom 2s ease-out;
 }
+
+@media only screen and (max-width: 767px) {
+  .footer-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

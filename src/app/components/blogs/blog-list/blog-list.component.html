@@ -1,5 +1,20 @@
 <div class="blog-container">
   <div class="blogs">
-    <h1>Blogs</h1>
+    <div class="heading">
+      <h1>Blogs</h1>
+    </div>
+    <div class="blog">
+      <div class="projects-card">
+        <div *ngFor="let project of dummyProject">
+          <project [project]="project"></project>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <contact-us></contact-us>
+    </div>
+    <div class="footer">
+      <footer></footer>
+    </div>
   </div>
 </div>

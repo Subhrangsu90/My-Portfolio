@@ -1,3 +1,20 @@
 <div class="project-container">
-  <div class="projects"><h1>Projects</h1></div>
+  <div class="projects">
+    <div class="heading">
+      <h1>My Remarkable Projects</h1>
+    </div>
+    <div class="project">
+      <div class="projects-card">
+        <div *ngFor="let project of dummyProjects">
+          <project [project]="project"></project>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <contact-us></contact-us>
+    </div>
+    <div class="footer">
+      <footer></footer>
+    </div>
+  </div>
 </div>

@@ -1,11 +1,50 @@
 import { Component } from '@angular/core';
-import { SidenavComponent } from '../../../shared/sidenav/sidenav.component';
-
+import { ContactUsComponent } from '../../../shared/contact-us/contact-us.component';
+import { FooterComponent } from '../../../shared/footer/footer.component';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ProjectComponent } from '../../../shared/project/project.component';
 @Component({
   selector: 'app-project-list',
   standalone: true,
-  imports: [SidenavComponent],
+  imports: [
+    CommonModule,
+    ContactUsComponent,
+    FooterComponent,
+    ProjectComponent,
+  ],
   templateUrl: './project-list.component.html',
   styleUrl: './project-list.component.css',
 })
-export class ProjectListComponent {}
+export class ProjectListComponent {
+  dummyProjects: any;
+
+  constructor(private router: Router) {
+    this.dummyProjects = [
+      {
+        id: 1,
+        title: 'Awesome Project 1',
+        category: 'Web Development',
+        imageUrl: '../../../../assets/images/CSSUnits.png',
+      },
+      {
+        id: 2,
+        title: 'Awesome Project 2',
+        category: 'Mobile App Development',
+        imageUrl: '../../../../assets/images/CSSUnits.png',
+      },
+      {
+        id: 3,
+        title: 'Awesome Project 3',
+        category: 'Mobile App Development',
+        imageUrl: '../../../../assets/images/CSSUnits.png',
+      },
+      {
+        id: 4,
+        title: 'Awesome Project 4',
+        category: 'Mobile App Development',
+        imageUrl: '../../../../assets/images/CSSUnits.png',
+      },
+    ];
+  }
+}
