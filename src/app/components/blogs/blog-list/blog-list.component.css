@@ -34,6 +34,7 @@ h1 {
 .footer {
   padding: 2.5rem 0;
 }
+
 @keyframes slideInFromBottom {
   from {
     transform: translateY(50%);
@@ -48,4 +49,15 @@ h1 {
 .heading,
 .blog {
   animation: slideInFromBottom 1s ease-out;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .projects-card {
+    grid-template-columns: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .projects-card {
+    grid-template-columns: none;
+  }
 }
