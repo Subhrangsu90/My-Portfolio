@@ -29,4 +29,11 @@ export class SidenavComponent {
   isActive(route: string): boolean {
     return this.router.isActive(route, true);
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'assets/Subhrangsu Bera_CV.pdf';
+    link.download = 'Subhrangsu Bera_CV.pdf';
+    link.click();
+  }
 }
