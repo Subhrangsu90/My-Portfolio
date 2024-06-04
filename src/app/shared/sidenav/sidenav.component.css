@@ -352,7 +352,7 @@ img:hover {
   .status {
     width: fit-content;
     height: fit-content;
-    padding: 1rem 1rem;
+    padding: 0.8rem 1rem;
   }
 
   .navbar {
