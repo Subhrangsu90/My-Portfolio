@@ -1,9 +1,14 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  Inject,
+  PLATFORM_ID,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
-
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
-
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,10 +20,17 @@ export class AppComponent implements OnInit {
   title = 'My-Portfolio';
   showNavbar: boolean = true;
 
-  constructor(private router: Router, private renderer: Renderer2) {}
+  constructor(
+    private router: Router,
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
-    this.generateBubbles();
+    if (isPlatformBrowser(this.platformId)) {
+      this.hideSplashScreen();
+    }
+    // this.generateBubbles();
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // Check if the current route is the 404 page
@@ -26,7 +38,15 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
+  hideSplashScreen() {
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen) {
+      splashScreen.classList.add('hidden');
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+      }, 30000); // Match the duration of the transition
+    }
+  }
   generateBubbles(): void {
     const bubbleContainer = this.renderer.selectRootElement('.bubbles');
     const bubbleCount = 20; // Number of bubbles
