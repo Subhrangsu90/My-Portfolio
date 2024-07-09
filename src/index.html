@@ -40,7 +40,7 @@
       #splash-screen {
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgb(8, 8, 8);
         display: flex;
         align-items: center;
@@ -70,6 +70,20 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: scale-up 5s ease-in-out infinite;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        #splash-screen p {
+          font-size: 5rem;
+          line-height: 15rem;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        #splash-screen p {
+          font-size: 2rem;
+          line-height: 10rem;
+        }
       }
     </style>
   </head>
