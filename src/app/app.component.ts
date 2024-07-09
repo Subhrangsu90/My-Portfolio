@@ -4,11 +4,14 @@ import {
   PLATFORM_ID,
   OnInit,
   Renderer2,
+  inject,
 } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
+import { ThemeService } from '../app/services/theme.service';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,12 +22,13 @@ import { isPlatformBrowser } from '@angular/common';
 export class AppComponent implements OnInit {
   title = 'My-Portfolio';
   showNavbar: boolean = true;
+  isDarkMode = false;
 
-  constructor(
-    private router: Router,
-    private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  private themeService = inject(ThemeService);
+  private router = inject(Router);
+  private renderer = inject(Renderer2);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -37,14 +41,32 @@ export class AppComponent implements OnInit {
         this.showNavbar = !event.urlAfterRedirects.includes('404');
       }
     });
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateThemeState();
+    }
   }
+
+  toggleTheme(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.themeService.toggleTheme();
+      this.updateThemeState();
+    }
+  }
+
+  updateThemeState(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const theme = document.documentElement.getAttribute('data-theme');
+      this.isDarkMode = theme === 'dark';
+    }
+  }
+
   hideSplashScreen() {
     const splashScreen = document.getElementById('splash-screen');
     if (splashScreen) {
-      splashScreen.classList.add('hidden');
+      // splashScreen.classList.add('hidden');
       setTimeout(() => {
         splashScreen.style.display = 'none';
-      }, 30000); // Match the duration of the transition
+      }, 10000);
     }
   }
   generateBubbles(): void {

@@ -1,4 +1,11 @@
 <div class="main-container">
+  <button class="theme-toggle" (click)="toggleTheme()">
+    <i
+      [ngClass]="
+        isDarkMode ? 'fa-solid fa-circle-half-stroke' : 'fa-regular fa-sun'
+      "
+    ></i>
+  </button>
   <div class="navbar" *ngIf="showNavbar">
     <sidenav></sidenav>
   </div>

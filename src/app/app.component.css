@@ -19,6 +19,29 @@
   overflow-y: auto;
 }
 
+.theme-toggle {
+  padding: 0.5rem;
+  background-color: var(--sp-green-60);
+  border: none;
+  border-radius: 50%;
+  color: var(--sp-dark-2);
+  cursor: pointer;
+  font-family: var(--font-inter);
+  z-index: 1000; /* Add a high z-index value */
+  position: absolute; /* Ensure the element is positioned */
+  top: 1%;
+  right: 1%;
+}
+
+/* .theme-toggle:hover {
+  background-color: var(--sp-green-10);
+} */
+
+.theme-toggle i {
+  font-size: 1.2rem; /* Adjust the size of the icon */
+  width: 1.2;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .navbar {
     width: 10rem;

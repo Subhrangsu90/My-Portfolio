@@ -262,6 +262,10 @@ p {
   font-weight: bold;
 }
 
+.cert-name :hover {
+  color: var(--sp-green-60);
+}
+
 .cert-name i {
   padding-right: 1rem;
 }
