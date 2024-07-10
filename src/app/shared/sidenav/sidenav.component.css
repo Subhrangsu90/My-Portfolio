@@ -5,7 +5,6 @@
   padding: 2rem 2rem 0 2rem;
   /* gap: 4rem; */
   height: 100%;
-  position: relative;
 }
 
 .sidebar {
@@ -187,7 +186,7 @@ img:hover {
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   font-size: 0.9em;
-  z-index: 1000; /* Ensure it's on top */
+  z-index: 1001; /* Ensure it's on top */
   bottom: 0;
   text-align: center;
 }
@@ -408,6 +407,10 @@ img:hover {
     overflow: hidden;
     transform: translatey(-100%); */
     opacity: 0;
+    display: none;
+  }
+
+  .popover {
     display: none;
   }
 }
