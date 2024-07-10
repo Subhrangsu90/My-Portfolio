@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
       // splashScreen.classList.add('hidden');
       setTimeout(() => {
         splashScreen.style.display = 'none';
-      }, 5000);
+      }, 3000);
     }
   }
   generateBubbles(): void {

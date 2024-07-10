@@ -29,13 +29,13 @@ export class HomeComponent {
         id: 1,
         title: 'Awesome Project 1',
         category: 'Web Development',
-        imageUrl: '../../../../assets/images/CSSUnits.png',
+        imageUrl: '../../../../assets/images/coming-soon.jpg',
       },
       {
         id: 2,
         title: 'Awesome Project 2',
         category: 'Mobile App Development',
-        imageUrl: '../../../../assets/images/CSSUnits.png',
+        imageUrl: '../../../../assets/images/coming-soon.jpg',
       },
       // {
       //   id: 3,

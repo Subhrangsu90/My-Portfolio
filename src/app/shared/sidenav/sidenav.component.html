@@ -4,11 +4,35 @@
       <div class="my-status">
         <!-- <div class="avatar">
           <img class="background" src="assets/images/background.jpg" alt="" /> -->
-        <img
+        <!-- <img
           class="my-image"
           src="assets/images/Subhrangsu.jpg"
           alt="Subhrangsu"
+          (click)="navigateTo('/')"
+          (mouseover)="showDateTime($event)"
+          (mouseout)="hideDateTime()"
         />
+
+        <div class="tooltip" [ngStyle]="tooltipStyle" *ngIf="showTooltip">
+          {{ currentDateTime }}
+        </div> -->
+
+        <div
+          class="image-container"
+          (mouseover)="showDateTime($event)"
+          (mouseout)="hideDateTime()"
+        >
+          <img
+            class="my-image"
+            src="assets/images/Subhrangsu.jpg"
+            alt="Subhrangsu"
+            (click)="navigateTo('/')"
+          />
+          <div class="popover" *ngIf="showPopover">
+            <div class="popover-date">{{ currentDate }}</div>
+            <div class="popover-time">{{ currentTime }}</div>
+          </div>
+        </div>
         <!-- </div> -->
 
         <div class="status">

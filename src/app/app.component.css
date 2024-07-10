@@ -67,6 +67,11 @@
     grid-area: Main;
     overflow-y: auto;
   }
+
+  .theme-toggle {
+    top: 12%;
+    right: 4%;
+  }
 }
 
 .bubbles {

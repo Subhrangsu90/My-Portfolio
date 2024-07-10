@@ -49,6 +49,38 @@ h1 {
   animation: slideInFromBottom 1s ease-out;
 }
 
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loader {
+  border: 8px solid var(--sp-light-60);
+  border-top: 8px solid var(--sp-sky-blue-50);
+  border-radius: 50%;
+  width: 5rem;
+  height: 6rem;
+  animation: spin 2s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.coming-soon-container p {
+  font-size: 1.5em;
+  color: var(--sp-light-60);
+  font-weight: 600;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .projects-card {
     grid-template-columns: none;

@@ -4,11 +4,20 @@
       <h1>My Remarkable Projects</h1>
     </div>
     <div class="project">
-      <div class="projects-card">
+      <div
+        class="projects-card"
+        *ngIf="dummyProjects && dummyProjects.length > 0; else comingSoon"
+      >
         <div *ngFor="let project of dummyProjects">
           <project [project]="project"></project>
         </div>
       </div>
+      <ng-template #comingSoon>
+        <div class="coming-soon-container">
+          <div class="loader"></div>
+          <p>Coming Soon</p>
+        </div>
+      </ng-template>
     </div>
     <div class="contact-us">
       <contact-us></contact-us>
