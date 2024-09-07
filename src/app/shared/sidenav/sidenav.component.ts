@@ -57,8 +57,8 @@ export class SidenavComponent {
 
   downloadCV() {
     const link = document.createElement('a');
-    link.href = 'assets/Subhrangsu Bera_CV.pdf';
-    link.download = 'Subhrangsu Bera_CV.pdf';
+    link.href = 'assets/Subhrangsu_Bera_CV.pdf';
+    link.download = 'Subhrangsu_Bera_CV.pdf';
     link.click();
   }
 }
